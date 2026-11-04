@@ -95,7 +95,7 @@ Foreign key relationships maintain consistency between users, resources, and boo
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Hanookviswa/CampusResourceBookingSystem.git
 cd CampusResourceBookingSystem
 ```
 
@@ -112,7 +112,7 @@ Configure the environment variables:
 
 ```env
 PORT=3000
-JWT_SECRET=uefoeqjeqvjvwqiq
+JWT_SECRET=your_jwt_secret_here
 ```
 
 Start the backend using the available development script in `package.json`.
