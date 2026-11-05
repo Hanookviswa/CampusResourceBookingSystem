@@ -14,7 +14,7 @@ app.use(express.json())
 app.use('/api/auth',authRouter)
 app.use('/api', bookingRouter);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 const startServer = async () =>{
