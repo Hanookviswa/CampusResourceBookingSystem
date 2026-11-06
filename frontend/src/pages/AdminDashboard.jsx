@@ -24,6 +24,8 @@ const AdminDashboard = () => {
                     Authorization: `Bearer ${token}`
                 };
 
+                const API_URL = import.meta.env.VITE_API_URL;
+
                 const [
                     bookingResponse,
                     resourceResponse,
@@ -31,19 +33,19 @@ const AdminDashboard = () => {
                     adminBookingResponse
                 ] = await Promise.all([
                     fetch(
-                        'http://localhost:3000/api/analytics/bookings',
+                        `${API_URL}/api/analytics/bookings`,
                         { headers }
                     ),
                     fetch(
-                        'http://localhost:3000/api/resources?limit=100',
+                        `${API_URL}/api/resources?limit=100`,
                         { headers }
                     ),
                     fetch(
-                        'http://localhost:3000/api/analytics/resources',
+                        `${API_URL}/api/analytics/resources`,
                         { headers }
                     ),
                     fetch(
-                        'http://localhost:3000/api/admin/bookings',
+                        `${API_URL}/api/admin/bookings`,
                         { headers }
                     )
                 ]);

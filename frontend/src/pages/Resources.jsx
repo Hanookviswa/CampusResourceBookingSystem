@@ -37,7 +37,7 @@ const Resources = () => {
         const getResources = async () => {
             try {
                 const response = await fetch(
-                    'http://localhost:3000/api/resources'
+                    `${import.meta.env.VITE_API_URL}/api/resources`
                 );
 
                 if (!response.ok) {
@@ -143,7 +143,7 @@ const Resources = () => {
 
         try {
             const response = await fetch(
-                'http://localhost:3000/api/resources/book',
+                `${import.meta.env.VITE_API_URL}/api/resources/book`,
                 {
                     method: 'POST',
                     headers: {

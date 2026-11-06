@@ -32,7 +32,7 @@ const MyBookings = () => {
       }
 
       const response = await fetch(
-        'http://localhost:3000/api/my-bookings',
+        `${import.meta.env.VITE_API_URL}/api/my-bookings`,
         {
           method: 'GET',
           headers: {
@@ -77,7 +77,7 @@ const MyBookings = () => {
       }
 
       const response = await fetch(
-        `http://localhost:3000/api/bookings/${bookingId}/cancel`,
+        `${import.meta.env.VITE_API_URL}/api/bookings/${bookingId}/cancel`,
         {
           method: 'PATCH',
           headers: {
@@ -143,7 +143,7 @@ const MyBookings = () => {
       }
 
       const response = await fetch(
-        `http://localhost:3000/api/bookings/${bookingId}`,
+        `${import.meta.env.VITE_API_URL}/api/bookings/${bookingId}`,
         {
           method: 'PUT',
           headers: {

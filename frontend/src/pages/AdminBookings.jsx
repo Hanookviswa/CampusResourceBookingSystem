@@ -12,7 +12,7 @@ const AdminBookings = () => {
                 const token = localStorage.getItem('jwtToken');
 
                 const response = await fetch(
-                    'http://localhost:3000/api/admin/bookings',
+                    `${import.meta.env.VITE_API_URL}/api/admin/bookings`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`

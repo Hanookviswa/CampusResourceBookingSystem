@@ -22,7 +22,7 @@ const AdminResources = () => {
             const token = localStorage.getItem('jwtToken');
 
             const response = await fetch(
-                'http://localhost:3000/api/resources?limit=100',
+                `${import.meta.env.VITE_API_URL}/api/resources?limit=100`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -69,7 +69,7 @@ const AdminResources = () => {
             const token = localStorage.getItem('jwtToken');
 
             const response = await fetch(
-                'http://localhost:3000/api/admin/resources',
+                `${import.meta.env.VITE_API_URL}/api/admin/resources`,
                 {
                     method: 'POST',
                     headers: {
@@ -118,7 +118,7 @@ const AdminResources = () => {
             const token = localStorage.getItem('jwtToken');
 
             const response = await fetch(
-                `http://localhost:3000/api/admin/resources/${editingId}`,
+                `${import.meta.env.VITE_API_URL}/api/admin/resources/${editingId}`,
                 {
                     method: 'PUT',
                     headers: {
@@ -172,7 +172,7 @@ const AdminResources = () => {
             const token = localStorage.getItem('jwtToken');
 
             const response = await fetch(
-                `http://localhost:3000/api/admin/resources/${resourceId}`,
+                `${import.meta.env.VITE_API_URL}/api/admin/resources/${resourceId}`,
                 {
                     method: 'DELETE',
                     headers: {

@@ -3,7 +3,7 @@ const sqlite3 = require('sqlite3')
 const path = require('path')
 const fs = require('fs')
 
-const dbPath = path.join(__dirname, "campus.db")
+const dbPath = process.env.DB_PATH || path.join(__dirname, "campus.db")
 let db=null;
 const initializeDb = async () =>{
     try{
